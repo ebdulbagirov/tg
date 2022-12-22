@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: rgb(238, 174, 202);
+            background: -o-radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        }
+        
+        #kutu {
+            background-color: #1d77a8;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 0 0 7px 0;
+            -webkit-animation-name: example;
+            animation-name: example;
+            -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+            -webkit-animation-duration: 4s;
+            animation-duration: 4s;
+            -webkit-animation-iteration-count: 100000000000000000000000000000000;
+            animation-iteration-count: 100000000000000000000000000000000;
+        }
+        
+        @-webkit-keyframes example {
+            from {
+                background-color: rgb(224, 113, 113);
+            }
+            to {
+                background-color: rgb(141, 133, 230);
+            }
+        }
+        
+        @keyframes example {
+            from {
+                background-color: rgb(224, 113, 113);
+            }
+            to {
+                background-color: rgb(141, 133, 230);
+            }
+        }
+        
+        h1 {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        h1:hover {
+            color: rgb(247, 7, 135);
+        }
+        
+        h2 {
+            color: rgb(17, 18, 19);
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        input {
+            border: 10px;
+            color: #f1085f;
+            background-color: aliceblue;
+            border-radius: 5px;
+            font-size: 21px;
+            width: 230px;
+        }
+        
+        #button_hesabla {
+            width: 100px;
+            color: #ffff;
+            background: rgb(215, 90, 246);
+            background: -webkit-gradient(linear, left top, right top, from(rgba(215, 90, 246, 0.5)), to(rgba(251, 7, 77, 1)));
+            background: -o-linear-gradient(left, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            background: linear-gradient(90deg, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            padding: 5px;
+        }
+        
+        #button_hesabla1 {
+            width: 100px;
+            color: #ffff;
+            background: rgb(215, 90, 246);
+            background: -webkit-gradient(linear, left top, right top, from(rgba(215, 90, 246, 0.5)), to(rgba(251, 7, 77, 1)));
+            background: -o-linear-gradient(left, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            background: linear-gradient(90deg, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            padding: 5px;
+        }
+        
+        #button_hesabla2 {
+            width: 100px;
+            color: #ffff;
+            background: rgb(215, 90, 246);
+            background: -webkit-gradient(linear, left top, right top, from(rgba(215, 90, 246, 0.5)), to(rgba(251, 7, 77, 1)));
+            background: -o-linear-gradient(left, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            background: linear-gradient(90deg, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            padding: 5px;
+        }
+        
+        #button_hesabla3 {
+            width: 100px;
+            color: #ffff;
+            background: rgb(215, 90, 246);
+            background: -webkit-gradient(linear, left top, right top, from(rgba(215, 90, 246, 0.5)), to(rgba(251, 7, 77, 1)));
+            background: -o-linear-gradient(left, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            background: linear-gradient(90deg, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            padding: 5px;
+        }
+        
+        #button_hesabla4 {
+            width: 100px;
+            color: #ffff;
+            background: rgb(215, 90, 246);
+            background: -webkit-gradient(linear, left top, right top, from(rgba(215, 90, 246, 0.5)), to(rgba(251, 7, 77, 1)));
+            background: -o-linear-gradient(left, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            background: linear-gradient(90deg, rgba(215, 90, 246, 0.5) 0%, rgba(251, 7, 77, 1) 100%);
+            padding: 5px;
+        }
+        
+        p {
+            color: white;
+            font-size: 20px;
+        }
+        
+        td {
+            color: white;
+        }
+        
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            margin-left: 30px;
+            right: 28px;
+            width: 280px;
+        }
+        
+        .open-button1 {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            margin-left: 30px;
+            right: 28px;
+            width: 280px;
+        }
+        
+        .open-button2 {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            margin-left: 30px;
+            right: 28px;
+            width: 280px;
+        }
+        
+        .open-button3 {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            margin-left: 30px;
+            right: 28px;
+            width: 280px;
+        }
+        
+        .open-button4 {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            margin-left: 30px;
+            right: 28px;
+            width: 280px;
+        }
+        /* The popup form - hidden by default */
+        
+        .form-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 20px;
+            z-index: 9;
+        }
+        /* Add styles to the form container */
+        /* Full-width input fields */
+        
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 87%;
+            border: none;
+            background: #f1f1f1;
+        }
+        /* When the inputs get focus, do something */
+        
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        /* Set a style for the submit/login button */
+        
+        .form-container .btn {
+            color: white;
+            padding: 16px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 25px;
+            opacity: 0.8;
+        }
+        /* Add a red background color to the cancel button */
+        
+        .form-container .cancel {
+            background-color: red;
+        }
+        /* Add some hover effects to buttons */
+        
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+        
+        .openpage1 {
+            display: none;
+        }
+        
+        .redmi1 {
+            background-color: rgb(250, 8, 137);
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            opacity: 0.8;
+            margin-left: 30px;
+            right: 28px;
+            width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+        
+        .pageOpen {
+            background-color: rgb(250, 8, 137);
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            opacity: 0.8;
+            margin-left: 30px;
+            right: 28px;
+            width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+        
+        #bt {
+            background-color: rgb(253, 252, 255);
+            color: black;
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            border-radius: 4px;
+            border: 1px solid black;
+            height: 20px;
+            text-align: center;
+            padding: 2px;
+            font-size: 15px;
+        }
+        
+        @media screen and (max-width: 360px) {
+            body {
+                overflow: scroll;
+            }
+            .form-popup {
+                overflow: scroll;
+                height: 100%;
+            }
+            #kutu {
+                overflow: scroll;
+            }
+            .form-container {
+                overflow: scroll;
+            }
+        }
+        
+        @media screen and (max-width: 600px) and (min-width: 300px) {
+            body {
+                overflow: scroll;
+            }
+            .form-popup {
+                overflow: scroll;
+                height: 100%;
+            }
+            #kutu {
+                overflow: scroll;
+                margin-top: 200px;
+            }
+            .form-container {
+                overflow: scroll;
+            }
+        }
+        
+        strong {
+            color: red;
+            font-size: 19px;
+        }
+        
+        h4 {
+            text-align: center;
+            color: #f1085f;
+            font-size: 20px;
+        }
+        
+        placeholder {
+            font-size: 9px;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            font-family: sans-serif;
+        }
+        
+        body {
+            background: rgb(161, 151, 151);
+        }
+        /* notes container */
+        
+        .container {
+            background: rgb(34, 193, 195);
+            background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            min-height: 100%;
+            max-height: 100%;
+            z-index: 1;
+        }
+        
+        .container .notes {
+            width: 94%;
+            margin: 10px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .container .notes .note {
+            background: rgb(33, 33, 39);
+            color: #fff;
+            margin: 0 auto;
+            /* width: 15rem;
+             height: 12rem; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            border-radius: 7px;
+            box-shadow: 0 0 2px 2px rgba(98, 100, 102, .308);
+        }
+        
+        .notes .note:hover {
+            box-shadow: none;
+        }
+        
+        .container .notes .add-note {
+            background: rgb(155, 154, 153);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container .notes .add-note span {
+            font-size: 30px;
+            border-radius: 50%;
+            background: rgb(20, 20, 28);
+            cursor: pointer;
+        }
+        
+        .container .notes .added-note h3 {
+            padding-top: 15px;
+            cursor: pointer;
+        }
+        
+        .container .notes .added-note .date {
+            font-size: 11px;
+            margin-left: 10rem;
+        }
+        
+        .container .notes .added-note .buttons {
+            display: flex;
+            width: 95%;
+            padding: 0 10px;
+            justify-content: space-between;
+        }
+        
+        .container .notes .added-note .buttons div {
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            background: rgba(17, 17, 17, .575);
+        }
+        
+        .added-note .buttons div:first-child {
+            color: yellow;
+        }
+        
+        .added-note .buttons div:last-child {
+            color: red;
+        }
+        /* popup container  */
+        
+        .add-note-container {
+            position: absolute;
+            z-index: 3;
+            background: rgb(192, 192, 190);
+            width: 325px;
+            height: minmax(30vh, 70vh);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-radius: 8px;
+            transition: all 300ms ease;
+            display: none;
+        }
+        
+        .title input {
+            display: flex;
+        }
+        
+        .add-note-container .title {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .add-note-container .title input {
+            width: 80%;
+            height: 2rem;
+            padding-left: 10px;
+            font-size: 1rem;
+            /* background: transparent; */
+            border-bottom: 1px solid gray;
+            font-weight: 600;
+        }
+        
+        .add-note-container .title input.focus {
+            border-bottom: 1px solid red;
+        }
+        
+        .add-note-container .title div {
+            margin-left: 30px;
+            width: 2rem;
+            height: 2rem;
+            background: rgb(15, 15, 15);
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .add-note-container .title div span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: #fff;
+        }
+        
+        .add-note-container .title div:hover {
+            background: rgb(53, 53, 53);
+            transform: rotate(25deg);
+        }
+        
+        .add-note-container .content textarea {
+            resize: none;
+            padding: 10px 0 0 10px;
+            font-size: 13px;
+            font-weight: 500;
+            background: transparent;
+        }
+        
+        .add-note-container .buttons {
+            display: flex;
+            justify-content: end;
+            padding: 0 20px;
+        }
+        
+        .add-note-container .buttons button {
+            width: 3.8rem;
+            height: 1.8rem;
+            border-radius: 6px;
+            margin-top: 5px;
+            font-weight: 600;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .add-note-container .buttons button:hover {
+            color: #000;
+            background: rgb(151, 151, 151);
+        }
+        
+        .add-note-container .buttons #edited-note {
+            display: none;
+        }
+        
+        .lerik {
+            display: none;
+        }
+        
+        h6 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="lerik" id="lerik1">
+        <!-- notes container -->
+        <div class="container">
+            <h6>Şagird Əlavə etmək üçün + düyməsinə toxunun</h6>
+            <div class="notes">
+
+                <div class="note add-note" onclick="showBtn()">
+                    <span class="material-icons-sharp">add</span>
+                </div>
+
+                <!-- <div class="note added-note">
+                <span class="date">10/10/2022</span>
+                <h3>Money Management</h3>
+                <div class="buttons">
+                    <div class="edit"><span class="material-icons-sharp">edit_note</span></div>
+                    <div class="delete"><span class="material-icons-sharp">delete</span></div>
+                </div>
+            </div> -->
+
+            </div>
+        </div>
+
+
+        <!-- popup container -->
+        <div class="add-note-container" id="new-note">
+            <div id="close-btn"><span class="material-icons-sharp">close</span></div>
+            <div class="title">
+                <h4>sinif nömrəsi</h4>
+                <input type="text" placeholder="">
+
+
+            </div>
+            <div class="title">
+                <h4>1</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>2</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>3</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>4</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>5</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>6</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>7</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>8</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>9</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>10</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>11</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>12</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>13</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>14</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+            <div class="title">
+                <h4>15</h4>
+                <input type="text" placeholder="ad">
+                <input type="text" placeholder="soyad">
+                <input type="text" placeholder="bal">
+            </div>
+
+            <div class="content">
+                <textarea cols="1" rows="1" placeholder=""></textarea>
+            </div>
+
+            <div class="buttons">
+                <button id="submit">Əlavə et</button>
+                <button id="edited-note">hazırdır</button>
+            </div>
+        </div>
+        <button type="button" class="btn cancell" onclick="closeFormm()">X</button>
+
+    </div>
+
+
+
+
+
+
+    <h1>Xoş gəlmisiniz.</h1>
+    <h3 id="h2">Yarımil və İllik hesablamaq üçün <strong>"irəli"</strong> düyməsinə toxunun</h3>
+    <button class="pageOpen" id="px" onclick="openpage()">İrəli</button>
+
+    <h3 id="class">Şagirdlərin siyahısına baxmaq üçün <strong>"Siniflər"</strong>düyməsinə toxunun</h3>
+    <button class="redmi1" id="cx" onclick="redmi()">Siniflər</button>
+    <!-- -----------------------------------ksq bsq hsblma----------------------------------------- -->
+    <div class="openpage1" id="Toform">
+        <h4>Müvafiq seçimi edin!</h4>
+        <button type="button" class="btn cancel1" id="bt" onclick="closePage()">Geri</button>
+        <button class="open-button" id="cv" onclick="openForm()">KSQ sayı "3" olduqda</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <div id="kutu">
+                    <table>
+                        <tr>
+                            <td>KSQ:1</td>
+                            <td>
+                                <input type="text" id="S1" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:2</td>
+                            <td>
+                                <input type="text" id="S2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>KSQ:3</td>
+                            <td>
+                                <input type="text" id="S3" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>BSQ</td>
+                            <td>
+                                <input type="text" id="S7" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="Hesabla" id="button_hesabla" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BAL:</td>
+                            <td>
+                                <span id="sonuc"></span>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+                    <p id="demo">Qiymət:</p>
+                </div>
+
+
+
+
+
+
+
+                <button type="button" class="btn cancel" onclick="closeForm()">pəncərəni bağla</button>
+            </form>
+        </div>
+        <!-- -------------------------------------------KSQ 4 OLDUQDA------------------------------------ -->
+        <button class="open-button1" id="cd" onclick="openForm1()">KSQ sayı "4" olduqda</button>
+
+        <div class="form-popup" id="myForm1">
+            <form action="/action_page.php" class="form-container">
+                <div id="kutu">
+                    <table>
+                        <tr>
+                            <td>KSQ:1</td>
+                            <td>
+                                <input type="text" id="D1" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:2</td>
+                            <td>
+                                <input type="text" id="D2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>KSQ:3</td>
+                            <td>
+                                <input type="text" id="D3" c />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:4</td>
+                            <td>
+                                <input type="text" id="D4" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>BSQ</td>
+                            <td>
+                                <input type="text" id="D7" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="Hesabla" id="button_hesabla1" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BAL:</td>
+                            <td>
+                                <span id="sonuc1"></span>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+                    <p id="demo1">Qiymət:</p>
+                </div>
+
+
+
+
+
+
+
+                <button type="button" class="btn cancel" onclick="closeForm1()">pəncərəni bağla</button>
+            </form>
+        </div>
+
+        <!-- -------------------------------------------KSQ 5 OLDUQDA------------------------------------ -->
+
+        <button class="open-button2" id="cf" onclick="openForm2()">KSQ sayı "5" olduqda</button>
+
+        <div class="form-popup" id="myForm2">
+            <form action="/action_page.php" class="form-container">
+                <div id="kutu">
+                    <table>
+                        <tr>
+                            <td>KSQ:1</td>
+                            <td>
+                                <input type="text" id="C1" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:2</td>
+                            <td>
+                                <input type="text" id="C2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>KSQ:3</td>
+                            <td>
+                                <input type="text" id="C3" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:4</td>
+                            <td>
+                                <input type="text" id="C4" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:5</td>
+                            <td>
+                                <input type="text" id="C5" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>BSQ</td>
+                            <td>
+                                <input type="text" id="C7" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="Hesabla" id="button_hesabla2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BAL:</td>
+                            <td>
+                                <span id="sonuc2"></span>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+                    <p id="demo2">Qiymət:</p>
+                </div>
+
+                <button type="button" class="btn cancel" onclick="closeForm2()">pəncərəni bağla</button>
+            </form>
+        </div>
+
+
+        <!-- -------------------------------------------KSQ 6 OLDUQDA------------------------------------ -->
+
+        <button class="open-button3" id="ce" onclick="openForm3()">KSQ sayı "6" olduqda</button>
+
+        <div class="form-popup" id="myForm3">
+            <form action="/action_page.php" class="form-container">
+                <div id="kutu">
+                    <table>
+                        <tr>
+                            <td>KSQ:1</td>
+                            <td>
+                                <input type="text" id="T1" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:2</td>
+                            <td>
+                                <input type="text" id="T2" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>KSQ:3</td>
+                            <td>
+                                <input type="text" id="T3" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:4</td>
+                            <td>
+                                <input type="text" id="T4" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:5</td>
+                            <td>
+                                <input type="text" id="T5" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>KSQ:6</td>
+                            <td>
+                                <input type="text" id="T6" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>BSQ</td>
+                            <td>
+                                <input type="text" id="T7" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="Hesabla" id="button_hesabla3" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BAL:</td>
+                            <td>
+                                <span id="sonuc3"></span>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+                    <p id="demo3">Qiymət:</p>
+                </div>
+
+                <button type="button" class="btn cancel" onclick="closeForm3()">pəncərəni bağla</button>
+            </form>
+        </div>
+
+        <!-- -------------------------------------------KSQ 6 OLDUQDA------------------------------------ -->
+
+        <button class="open-button4" id="ca" onclick="openForm4()">İllik hesabla</button>
+
+        <div class="form-popup" id="myForm4">
+            <form action="/action_page.php" class="form-container">
+                <div id="kutu">
+                    <table>
+                        <tr>
+                            <td>1-ci yarımil balı</td>
+                            <td>
+                                <input type="text" id="O1" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2-ci yarımil balı</td>
+                            <td>
+                                <input type="text" id="O2" />
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" value="Hesabla" id="button_hesabla4" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>BAL:</td>
+                            <td>
+                                <span id="sonuc4"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <p id="demo4">Qiymət:</p>
+                </div>
+
+                <button type="button" class="btn cancel" onclick="closeForm4()">pəncərəni bağla</button>
+            </form>
+        </div>
+
+
+
+
+    </div>
+    <!-- ----------------------------------------------------ksq3-------------------------------------------------------------------------------- -->
+    <script>
+        let btnHesapla = document.getElementById('button_hesabla');
+        btnHesapla.onclick = function(e) {
+            let s1 = document.getElementById('S1');
+            let s2 = document.getElementById('S2');
+            let s3 = document.getElementById('S3');
+            let s7 = document.getElementById('S7');
+
+            let toplam = (parseInt(s1.value) + parseInt(s2.value) + parseInt(s3.value)) / 3 * (40 / 100) + (parseInt(s7.value)) * 60 / 100;
+            let s = document.getElementById('sonuc')
+            s.innerText = toplam
+
+            let kox = toplam;
+
+            let qiymet;
+            if (kox < 30) {
+                qiymet = "qiymət:2"
+            } else if (kox > 31, kox < 60) {
+                qiymet = "qiymət:3";
+            } else if (kox > 61, kox < 80) {
+                qiymet = "qiymət:4";
+            } else if (kox > 81) {
+                qiymet = "qiymət:5";
+            } else {
+                qiymet = "bos xanalari doldurun";
+            }
+            document.getElementById("demo").innerHTML = qiymet;
+
+        };
+
+        // -----------------------------------------------------ksq 4 ucun---------------------------------------------
+
+        let btnHesapla1 = document.getElementById('button_hesabla1');
+        btnHesapla1.onclick = function(e) {
+            let d1 = document.getElementById('D1');
+            let d2 = document.getElementById('D2');
+            let d3 = document.getElementById('D3');
+            let d4 = document.getElementById('D4');
+            let d7 = document.getElementById('D7');
+
+            let toplam1 = (parseInt(d1.value) + parseInt(d2.value) + parseInt(d3.value) + parseInt(d4.value)) / 4 * (40 / 100) + (parseInt(d7.value)) * 60 / 100;
+            let d = document.getElementById('sonuc1')
+            d.innerText = toplam1
+
+            let koxx = toplam1;
+
+            let qiymet1;
+            if (koxx < 30) {
+                qiymet1 = "qiymət:2"
+            } else if (koxx > 31, koxx < 60) {
+                qiymet1 = "qiymət:3";
+            } else if (koxx > 61, koxx < 80) {
+                qiymet1 = "qiymət:4";
+            } else if (koxx > 81) {
+                qiymet1 = "qiymət:5";
+            } else {
+                qiymet1 = "bos xanalari doldurun";
+            }
+            document.getElementById("demo1").innerHTML = qiymet1;
+
+        };
+
+        // ---------------------------------------ksq 5 ucun---------------------------------------
+        let btnHesapla2 = document.getElementById('button_hesabla2');
+        btnHesapla2.onclick = function(e) {
+            let c1 = document.getElementById('C1');
+            let c2 = document.getElementById('C2');
+            let c3 = document.getElementById('C3');
+            let c4 = document.getElementById('C4');
+            let c5 = document.getElementById('C5');
+            let c7 = document.getElementById('C7');
+
+            let toplam2 = (parseInt(c1.value) + parseInt(c2.value) + parseInt(c3.value) + parseInt(c4.value) + parseInt(c5.value)) / 5 * (40 / 100) + (parseInt(c7.value)) * 60 / 100;
+            let m = document.getElementById('sonuc2')
+            m.innerText = toplam2
+
+            let koxx1 = toplam2;
+
+            let qiymet2;
+            if (koxx1 < 30) {
+                qiymet2 = "qiymət:2"
+            } else if (koxx1 > 31, koxx1 < 60) {
+                qiymet2 = "qiymət:3";
+            } else if (koxx1 > 61, koxx1 < 80) {
+                qiymet2 = "qiymət:4";
+            } else if (koxx1 > 81) {
+                qiymet2 = "qiymət:5";
+            } else {
+                qiymet2 = "bos xanalari doldurun";
+            }
+            document.getElementById("demo2").innerHTML = qiymet2;
+
+        };
+
+        // -------------------------------------------------ksq 6-----------------------
+        let btnHesapla3 = document.getElementById('button_hesabla3');
+        btnHesapla3.onclick = function(e) {
+            let t1 = document.getElementById('T1');
+            let t2 = document.getElementById('T2');
+            let t3 = document.getElementById('T3');
+            let t4 = document.getElementById('T4');
+            let t5 = document.getElementById('T5');
+            let t6 = document.getElementById('T6');
+            let t7 = document.getElementById('T7');
+
+            let toplam3 = (parseInt(t1.value) + parseInt(t2.value) + parseInt(t3.value) + parseInt(t4.value) + parseInt(t5.value) + parseInt(t6.value)) / 6 * (40 / 100) + (parseInt(t7.value)) * 60 / 100;
+            let n = document.getElementById('sonuc3')
+            n.innerText = toplam3
+
+            let koxx3 = toplam3;
+
+            let qiymet3;
+            if (koxx3 < 30) {
+                qiymet3 = "qiymət:2"
+            } else if (koxx3 > 31, koxx3 < 60) {
+                qiymet3 = "qiymət:3";
+            } else if (koxx3 > 61, koxx3 < 80) {
+                qiymet3 = "qiymət:4";
+            } else if (koxx3 > 81) {
+                qiymet3 = "qiymət:5";
+            } else {
+                qiymet2 = "bos xanalari doldurun";
+            }
+            document.getElementById("demo3").innerHTML = qiymet3;
+
+        };
+        // -------------------------------------------------ksq 6-----------------------
+        let btnHesapla4 = document.getElementById('button_hesabla4');
+        btnHesapla4.onclick = function(e) {
+            let o1 = document.getElementById('O1');
+            let o2 = document.getElementById('O2');
+
+
+            let toplam4 = parseInt(o1.value) + parseInt(o2.value);
+            let q = document.getElementById('sonuc4')
+            q.innerText = toplam4
+
+            let koxx4 = toplam4;
+
+            let qiymet4;
+            if (koxx4 < 30) {
+                qiymet4 = "qiymət:2"
+            } else if (koxx4 > 31, koxx4 < 60) {
+                qiymet4 = "qiymət:3";
+            } else if (koxx4 > 61, koxx4 < 80) {
+                qiymet4 = "qiymət:4";
+            } else if (koxx4 > 81) {
+                qiymet4 = "qiymət:5";
+            } else {
+                qiymet2 = "bos xanalari doldurun";
+            }
+            document.getElementById("demo4").innerHTML = qiymet4;
+
+        };
+
+
+
+        // <!-- ------------------------------------------ ------------------------------------ -->
+        function redmi() {
+            document.getElementById("lerik1").style.display = "block";
+        }
+
+        function closeFormm() {
+            document.getElementById("lerik1").style.display = "none";
+        }
+
+
+
+
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+            document.getElementById("bt").style.display = "none";
+            document.getElementById("cv").style.display = "none";
+            document.getElementById("cd").style.display = "none";
+            document.getElementById("cf").style.display = "none";
+            document.getElementById("ce").style.display = "none";
+            document.getElementById("ca").style.display = "none";
+            document.getElementById("cx").style.display = "none";
+            document.getElementById("class").style.display = "none";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+            document.getElementById("bt").style.display = "block";
+            document.getElementById("cv").style.display = "block";
+            document.getElementById("cd").style.display = "block";
+            document.getElementById("cf").style.display = "block";
+            document.getElementById("ce").style.display = "block";
+            document.getElementById("ca").style.display = "block";
+            document.getElementById("cx").style.display = "block";
+            document.getElementById("class").style.display = "block";
+
+
+
+
+
+        }
+
+        function openForm1() {
+            document.getElementById("myForm1").style.display = "block";
+            document.getElementById("bt").style.display = "none";
+            document.getElementById("cv").style.display = "none";
+            document.getElementById("cd").style.display = "none";
+            document.getElementById("cf").style.display = "none";
+            document.getElementById("ce").style.display = "none";
+            document.getElementById("ca").style.display = "none";
+            document.getElementById("cx").style.display = "none";
+            document.getElementById("class").style.display = "none";
+
+        }
+
+        function closeForm1() {
+            document.getElementById("myForm1").style.display = "none";
+            document.getElementById("bt").style.display = "block";
+            document.getElementById("cv").style.display = "block";
+            document.getElementById("cd").style.display = "block";
+            document.getElementById("cf").style.display = "block";
+            document.getElementById("ce").style.display = "block";
+            document.getElementById("ca").style.display = "block";
+            document.getElementById("cx").style.display = "block";
+            document.getElementById("class").style.display = "block";
+        }
+
+        function openForm2() {
+            document.getElementById("myForm2").style.display = "block";
+            document.getElementById("bt").style.display = "none";
+            document.getElementById("cv").style.display = "none";
+            document.getElementById("cd").style.display = "none";
+            document.getElementById("cf").style.display = "none";
+            document.getElementById("ce").style.display = "none";
+            document.getElementById("ca").style.display = "none";
+            document.getElementById("cx").style.display = "none";
+            document.getElementById("class").style.display = "none";
+        }
+
+        function closeForm2() {
+            document.getElementById("myForm2").style.display = "none";
+            document.getElementById("bt").style.display = "block";
+            document.getElementById("cv").style.display = "block";
+            document.getElementById("cd").style.display = "block";
+            document.getElementById("cf").style.display = "block";
+            document.getElementById("ce").style.display = "block";
+            document.getElementById("ca").style.display = "block";
+            document.getElementById("cx").style.display = "block";
+            document.getElementById("class").style.display = "block";
+        }
+
+        function openForm3() {
+            document.getElementById("myForm3").style.display = "block";
+            document.getElementById("bt").style.display = "none";
+            document.getElementById("cv").style.display = "none";
+            document.getElementById("cd").style.display = "none";
+            document.getElementById("cf").style.display = "none";
+            document.getElementById("ce").style.display = "none";
+            document.getElementById("ca").style.display = "none";
+            document.getElementById("cx").style.display = "none";
+            document.getElementById("class").style.display = "none";
+        }
+
+        function closeForm3() {
+            document.getElementById("myForm3").style.display = "none";
+            document.getElementById("bt").style.display = "block";
+            document.getElementById("cv").style.display = "block";
+            document.getElementById("cd").style.display = "block";
+            document.getElementById("cf").style.display = "block";
+            document.getElementById("ce").style.display = "block";
+            document.getElementById("ca").style.display = "block";
+            document.getElementById("cx").style.display = "block";
+            document.getElementById("class").style.display = "block";
+        }
+
+        function openForm4() {
+            document.getElementById("myForm4").style.display = "block";
+            document.getElementById("bt").style.display = "none";
+            document.getElementById("cv").style.display = "none";
+            document.getElementById("cd").style.display = "none";
+            document.getElementById("cf").style.display = "none";
+            document.getElementById("ce").style.display = "none";
+            document.getElementById("ca").style.display = "none";
+            document.getElementById("cx").style.display = "none";
+            document.getElementById("class").style.display = "none";
+        }
+
+        function closeForm4() {
+            document.getElementById("myForm4").style.display = "none";
+            document.getElementById("bt").style.display = "block";
+            document.getElementById("cv").style.display = "block";
+            document.getElementById("cd").style.display = "block";
+            document.getElementById("cf").style.display = "block";
+            document.getElementById("ce").style.display = "block";
+            document.getElementById("ca").style.display = "block";
+            document.getElementById("cx").style.display = "block";
+            document.getElementById("class").style.display = "block";
+
+
+
+        }
+
+        function openpage() {
+            document.getElementById("Toform").style.display = "block";
+            document.getElementById("px").style.display = "none";
+            document.getElementById("h2").style.display = "none";
+            document.getElementById("cx").style.display = "none";
+            document.getElementById("class").style.display = "none";
+        }
+
+        function closePage() {
+            document.getElementById("Toform").style.display = "none";
+            document.getElementById("px").style.display = "block";
+            document.getElementById("h2").style.display = "block";
+            document.getElementById("cx").style.display = "block";
+            document.getElementById("class").style.display = "block";
+        }
+
+        // all required variables
+        const popupBox = document.getElementById('new-note'),
+            closeBtn = document.querySelector('#close-btn'),
+            changeNote = document.getElementById('edited-note'),
+            submission = document.querySelector('#submit'),
+            title = document.querySelector('.title input'),
+            text = document.querySelector('.content textarea'),
+            newNote = document.querySelector('.notes');
+
+        //for showing the popup window
+        function showBtn() {
+            popupBox.style.display = 'block';
+            changeNote.style.display = 'none';
+            submission.style.display = 'block';
+            text.value = '';
+            title.value = '';
+            title.classList.remove('focus');
+            text.disabled = false;
+            title.disabled = false;
+        }
+
+        // close button
+        closeBtn.addEventListener('click', () => {
+            popupBox.style.display = 'none';
+        })
+
+        // for adding new notes
+        submission.addEventListener('click', () => {
+            if (title.value == '') {
+                title.classList.add('focus');
+            } else {
+                let newDate = new Date().toLocaleDateString();
+
+                const notes = {
+                    date: newDate,
+                    title: title.value,
+                    text: text.value
+                }
+
+                let local = JSON.parse(localStorage.getItem('notes'));
+
+                if (local == null) {
+                    const arr = [];
+                    arr.push(notes);
+                    localStorage.setItem('notes', JSON.stringify(arr))
+                } else {
+                    local.push(notes);
+                    localStorage.setItem('notes', JSON.stringify(local))
+                }
+
+                newNote.innerHTML = `<div class="note add-note" onclick="showBtn()">
+                                <span class="material-icons-sharp">add</span>
+                            </div>`;
+
+                reload()
+
+                popupBox.style.display = 'none';
+
+                title.value = '';
+                text.value = '';
+            }
+        })
+
+        // function for reloading the notes
+        function reload() {
+            let array = JSON.parse(localStorage.getItem('notes'));
+
+            if (array != null) {
+                for (let i = array.length - 1; i >= 0; i--) {
+                    newNote.innerHTML += `<div class="note added-note" id="${i}">
+                                    <span class="date">${array[i].date}</span>
+                                    <h3 onclick="viewNote()">${array[i].title}</h3>
+                                    <div class="buttons">
+                                        <div class="edit"><span onclick="editNote()" class="material-icons-sharp">edit_note</span></div>
+                                        <div class="delete"><span onclick="deleteNote()" class="material-icons-sharp">delete</span></div>
+                                    </div>
+                                </div>`
+                }
+            }
+        }
+
+
+        // for load all the notes from localstorage after loading the page
+        window.addEventListener('load', () => {
+            reload()
+        })
+
+
+        // for deleting the notes
+        function deleteNote() {
+            const mark = document.querySelectorAll('.delete');
+            let datas = JSON.parse(localStorage.getItem('notes'));
+            let remaining;
+
+            for (let i = mark.length - 1; i >= 0; i--) {
+                mark[i].onclick = function() {
+                    this.parentNode.parentNode.remove();
+
+                    remaining = datas.filter(data => data != datas[this.parentNode.parentNode.id]);
+
+                    localStorage.setItem('notes', JSON.stringify(remaining));
+
+                    newNote.innerHTML = `<div class="note add-note" onclick="showBtn()">
+                                <span class="material-icons-sharp">add</span>
+                            </div>`;
+
+                    reload()
+                }
+            }
+        }
+
+
+        // for editing the notes
+        function editNote() {
+
+            text.disabled = false;
+            title.disabled = false;
+            title.classList.remove('focus');
+
+            let currentData = JSON.parse(localStorage.getItem('notes'));
+            let mark = document.querySelectorAll('.edit');
+            let noteDate = new Date().toLocaleDateString();
+            let updatedNote;
+
+            for (let i = mark.length - 1; i >= 0; i--) {
+                mark[i].onclick = function() {
+                    popupBox.style.display = 'block';
+                    title.value = currentData[this.parentNode.parentNode.id].title;
+
+                    text.value = currentData[this.parentNode.parentNode.id].text;
+
+                    submission.style.display = 'none';
+                    changeNote.style.display = 'block';
+
+                    changeNote.onclick = () => {
+                        if (title.value == '') {
+                            title.classList.add('focus');
+                        } else {
+                            if (currentData[this.parentNode.parentNode.id].title != title.value || currentData[this.parentNode.parentNode.id].text != text.value) {
+                                this.parentNode.parentNode.remove();
+
+                                updatedNote = currentData.filter(data => data != currentData[this.parentNode.parentNode.id])
+
+                                const notes = {
+                                    date: noteDate,
+                                    title: title.value,
+                                    text: text.value
+                                }
+
+                                updatedNote.push(notes);
+                                localStorage.setItem('notes', JSON.stringify(updatedNote));
+
+                                popupBox.style.display = 'none';
+
+                                newNote.innerHTML = `<div class="note add-note" onclick="showBtn()">
+                                                <span class="material-icons-sharp">add</span>
+                                            </div>`;
+
+                                reload()
+                            } else {
+                                popupBox.style.display = 'none';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // for viewing the notes contents
+        function viewNote() {
+            title.classList.remove('focus');
+
+            let currentData = JSON.parse(localStorage.getItem('notes'));
+            const noteLists = document.querySelectorAll('.added-note');
+
+            for (let i = noteLists.length - 1; i >= 0; i--) {
+                noteLists[i].onclick = function() {
+                    popupBox.style.display = 'block';
+                    title.value = currentData[this.id].title;
+                    text.value = currentData[this.id].text;
+                }
+
+                submission.style.display = 'none';
+                changeNote.style.display = 'none';
+
+                text.disabled = true;
+                title.disabled = true;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
